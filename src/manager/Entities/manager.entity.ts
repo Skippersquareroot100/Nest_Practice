@@ -12,6 +12,7 @@ import {
 import { NameEntity } from './name.entity';
 import { StaffEntity } from './staff.entity';
 import { ProjectEntity } from './project.entity';
+<<<<<<< HEAD
 @Entity()
 export class ManagerEntity {
   @PrimaryColumn()
@@ -20,6 +21,21 @@ export class ManagerEntity {
   username: string;
 
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+=======
+
+@Entity()
+export class ManagerEntity {
+  
+  @PrimaryColumn()
+  id: number;
+
+  @Column('varchar', { unique: true, length: 100 })
+  username: string;
+
+  @Column('boolean', { default: false })
+  isActive: boolean;
+
+>>>>>>> lab3
   @OneToOne(() => NameEntity, (name) => name.manager, { cascade: true })
   @JoinColumn()
   name: NameEntity;
@@ -31,5 +47,11 @@ export class ManagerEntity {
     cascade: true,
   })
   @JoinTable()
+<<<<<<< HEAD
   projects: ProjectEntity[];
+=======
+  project: ProjectEntity[];
+
+  
+>>>>>>> lab3
 }
