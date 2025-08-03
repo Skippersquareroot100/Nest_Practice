@@ -15,7 +15,6 @@ import { ProjectEntity } from './project.entity';
 
 @Entity()
 export class ManagerEntity {
-  
   @PrimaryColumn()
   id: number;
 
@@ -37,6 +36,4 @@ export class ManagerEntity {
   })
   @JoinTable()
   project: ProjectEntity[];
-
-  
 }

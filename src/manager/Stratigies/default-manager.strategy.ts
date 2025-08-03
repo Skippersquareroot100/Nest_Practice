@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ManagerCreationStrategy } from './manager.strategy';
 import { NameService } from '../Services/name.service';
-import { ManagerCreateService } from '../Services/manager-create.service';
+import { ManagerCreateService } from '../Services/concreteServices/manager-create.service';
 import { CreateDTO } from '../DTOs/Create.DTO';
 
 @Injectable()
