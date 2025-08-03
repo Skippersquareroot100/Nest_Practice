@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { DataSource } from 'typeorm';
-import { CreateDTO } from '../DTOs/Create.DTO';
-import { SharedIdService } from './shared.service';
-import { ICreateManager } from '../Interfaces/create-manager.interface';
+import { CreateDTO } from '../../DTOs/Create.DTO';
+import { SharedIdService } from '../shared.service';
+import { ICreateManager } from '../../Interfaces/create-manager.interface';
 
 @Injectable()
 export class ManagerCreateService implements ICreateManager {

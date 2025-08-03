@@ -37,3 +37,37 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 >>>>>>> lab3
 })
 export class AppModule {}
+
+
+/*
+
+📱 Client (API call: /get-by-name?name=anik)
+       │
+       ▼
+🎮 Controller (ManagerController)
+       │
+       ▼ (calls)
+📦 GetByNameService
+       │
+       ▼ (delegates)
+🎯 GetByNameStrategy → GetByNameCreateService
+       │
+       ▼ (runs SQL)
+🗄️ Database (returns rows)
+       │
+       ▼ (mapped to string[])
+📦 GetByNameCreateService → returns ["Anik", "Manik"]
+       │
+       ▼
+📦 GetByNameService → returns ["Anik", "Manik"]
+       │
+       ▼
+🎮 Controller → returns ["Anik", "Manik"]
+       │
+       ▼
+🌐 NestJS (serializes to JSON)
+       │
+       ▼
+📱 Client (gets JSON response)
+
+*/
