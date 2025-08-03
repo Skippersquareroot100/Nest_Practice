@@ -13,6 +13,7 @@ import { NameEntity } from './name.entity';
 import { StaffEntity } from './staff.entity';
 import { ProjectEntity } from './project.entity';
 
+
 @Entity()
 export class ManagerEntity {
   @PrimaryColumn()
@@ -23,6 +24,7 @@ export class ManagerEntity {
 
   @Column('boolean', { default: false })
   isActive: boolean;
+
 
   @OneToOne(() => NameEntity, (name) => name.manager, { cascade: true })
   @JoinColumn()
@@ -35,5 +37,7 @@ export class ManagerEntity {
     cascade: true,
   })
   @JoinTable()
+
   project: ProjectEntity[];
+
 }

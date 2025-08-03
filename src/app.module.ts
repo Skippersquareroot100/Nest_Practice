@@ -1,4 +1,21 @@
 import { Module } from '@nestjs/common';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+
+@Module({
+  imports: [],
+  controllers: [AppController],
+  providers: [AppService],
+=======
+import { ManagerModule } from './manager/manager.module';
+@Module({
+  imports: [ManagerModule],
+  controllers: [],
+  providers: [],
+>>>>>>> ac2e4b8 (update)
+=======
 import { ManagerModule } from './manager/manager.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
@@ -17,6 +34,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   ],
   controllers: [],
   providers: [],
+>>>>>>> lab3
 })
 export class AppModule {}
 

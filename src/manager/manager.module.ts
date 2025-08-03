@@ -1,5 +1,15 @@
 import { Get, Module } from '@nestjs/common';
 import { ManagerController } from './manager.controller';
+import { ManagerService } from './manager.service';
+
+@Module({
+  controllers: [ManagerController],
+  providers: [ManagerService],
+})
+export class ManagerModule {}
+
+import { Module } from '@nestjs/common';
+import { ManagerController } from './manager.controller';
 import { ManagerService } from './Services/manager.service';
 import { ManagerEntity } from './Entities/manager.entity';
 import { NameEntity } from './Entities/name.entity';

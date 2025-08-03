@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { Controller } from '@nestjs/common';
+
+@Controller('manager')
+export class ManagerController {}
+=======
 import {
   Body,
   Controller,
@@ -63,3 +69,4 @@ export class ManagerController {
     return { message: `User with username ${uname} deleted successfully` };
   }
 }
+>>>>>>> lab3
