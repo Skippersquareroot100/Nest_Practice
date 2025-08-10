@@ -1,6 +1,9 @@
 import { Module } from '@nestjs/common';
 import { ManagerModule } from './manager/manager.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PracticeModule } from './practice/practice.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 @Module({
   imports: [
     ManagerModule,
@@ -14,6 +17,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       autoLoadEntities: true,
       synchronize: true,
     }),
+    PracticeModule,
+    AuthModule,
+    UsersModule,
   ],
   controllers: [],
   providers: [],
